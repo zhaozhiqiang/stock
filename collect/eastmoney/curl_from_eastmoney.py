@@ -5,7 +5,7 @@ import codecs
 from subprocess import check_output
 
 
-STOCKS = './tmp/stocks.txt'
+STOCKS = '../../data/stock_list.txt'
 EASTMONEY = 'http://quote.eastmoney.com/stocklist.html'
 
 
@@ -29,7 +29,7 @@ def get_stocks_id(html):
 
 def get_html():
     # print sys.argv[1]
-    if os.path.isfile(STOCKS) and '-r' == sys.argv[1]:
+    if os.path.isfile(STOCKS) and ('-r' == sys.argv[1]):
         os.remove(STOCKS)
     html = check_output(['curl', EASTMONEY]).decode('gbk').encode('utf-8')
     return html
