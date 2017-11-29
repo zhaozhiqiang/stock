@@ -5,7 +5,7 @@ import sqlite3
 
 
 PROCESS_NUM = 8
-STOCK_HIS_FILE = './stocks_his'
+STOCK_HIS_FILE = '../../data/stocks_his'
 STOCKS_DB = 'stocks.db'
 CURL_ARG_0 = 'http://q.stock.sohu.com/hisHq?code=cn_'
 CURL_ARG_1 = '000001'
