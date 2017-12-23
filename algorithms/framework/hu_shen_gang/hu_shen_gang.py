@@ -55,6 +55,7 @@ class HuShenGang(Task):
             self.get_file_path(index), content)
 
     def requests_all_data(self):
+        print(self.link_info['name'])
         for key, value in tqdm(self.data_status.items()):
             if value is None:
                 self.requests_data(int(key))

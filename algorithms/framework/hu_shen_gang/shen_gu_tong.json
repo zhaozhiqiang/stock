@@ -1,4 +1,5 @@
 {
+    "name": "深股通",
     "pages": "518",
     "directory": ".shen_gu_tong/",
     "link_begin": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=",
