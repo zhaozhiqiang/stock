@@ -2,5 +2,7 @@
 .idea
 .vscode
 .*_tong
+*.txt
+*.gitignore
 data
 __pycache__
