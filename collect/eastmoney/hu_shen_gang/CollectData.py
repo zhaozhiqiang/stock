@@ -15,3 +15,7 @@ class CollectData:
         for task in self.tasks:
             task.clear()
             task.requests_all_data()
+
+    def clear(self):
+        for task in self.tasks:
+            task.clear()

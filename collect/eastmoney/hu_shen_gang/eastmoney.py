@@ -11,5 +11,11 @@ if '__main__' == __name__:
     collect_data.__init__(tasks)
     if len(sys.argv) > 1 and 'init' == sys.argv[1]:
         collect_data.initialize()
+    elif len(sys.argv) > 1 and 'clear' == sys.argv[1]:
+        collect_data.clear()
+        pass
+    elif len(sys.argv) > 1 and 'update' == sys.argv[1]:
+        collect_data.()
+        pass
     else:
         collect_data.process_tasks()
