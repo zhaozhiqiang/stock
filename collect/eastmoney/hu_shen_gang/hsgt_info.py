@@ -24,8 +24,8 @@ class HSGT_Info:
     def name(self):
         return self._info['name']
 
-    def date(self):
-        return self._info['data']
+    def last_date(self):
+        return self._info['last_date']
 
     def page_link(self, page):
         begin_length = int(self._info['begin_length'])
@@ -39,10 +39,11 @@ class HSGT_Info:
     def folder(self):
         return self._info['folder']
 
-    def extract_info(self, original_str):
-        useful_begin = self._info['useful_begin']
-        useful_end = self._info['useful_end']
-        return original_str[useful_begin:useful_end]
+    def useful_begin(self):
+        return self._info['useful_begin']
+
+    def useful_end(self):
+        return self._info['useful_end']
 
     def update_hsgt_info(self, key, value):
         if not os.path.exists(self.HSGT_JSON):
@@ -50,4 +51,4 @@ class HSGT_Info:
 
         self._hsgt_info[self._hsgt][0][key] = value        
         with open(self.HSGT_JSON, 'w') as f:
-            json.dump(self.HSGT_JSON, f)
+            json.dump(self._hsgt_info, f)

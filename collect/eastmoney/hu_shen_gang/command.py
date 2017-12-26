@@ -2,7 +2,10 @@ import json
 import sys
 
 from hu_shen_gang_tong import HuShenGangTong
+from save_to_sqlite import SaveToSqlite
 from task import Task
+from hsgt_db import HSGTDB
+from hsgt_info import HSGT_Info
 
 
 class Command:
@@ -40,9 +43,18 @@ if '__main__' == __name__:
         fund_manager.initialize()
     elif len(sys.argv) > 1 and 'clear' == sys.argv[1]:
         fund_manager.clear()
-        pass
     elif len(sys.argv) > 1 and 'update' == sys.argv[1]:
-        fund_manager.update()
-        pass
+        hsgt_db = HSGTDB()
+        hsgt_db.connect()
+        date = hsgt_db.get_last_date()
+        hgt_info = HSGT_Info('hgt')
+        sgt_info = HSGT_Info('sgt')
+        hgt_info.update_hsgt_info('last_date', date)
+        sgt_info.update_hsgt_info('last_date', date)
+    elif len(sys.argv) > 1 and 'sql' == sys.argv[1]:
+        hgt = SaveToSqlite('hgt')
+        sgt = SaveToSqlite('sgt')
+        hgt.save_all_files_to_sqlite()
+        sgt.save_all_files_to_sqlite()
     else:
         fund_manager.process_tasks()
