@@ -27,6 +27,10 @@ class HSGTDB:
         self.cursor.close()
         self.conn.close()
 
+    def get_last_date(self):
+        self.cursor.execute("select date from hsgt ORDER BY date DESC")
+        return self.cursor.fetchone()[0]
+
     def insert_data(self, data):
         self.cursor.executemany(
             "insert into hsgt  values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", data)
