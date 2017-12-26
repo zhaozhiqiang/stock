@@ -1,7 +1,0 @@
-{
-    "name": "沪股通",
-    "pages": "376",
-    "directory": "hu_gu_tong/",
-    "link_begin": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=",
-    "link_end": "&ps=50&js=var%20AkIGHtZX={pages:(tp),data:(x)}&filter=(MARKET=%27001%27)(HDDATE%3E=^2017-11-16^%20and%20HDDATE%3C=^2017-12-20^)&rt=50462276"
-}

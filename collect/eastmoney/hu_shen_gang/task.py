@@ -1,13 +1,17 @@
 
 
 class Task:
+    def __init__(self):
+        pass
+
     def produce_links(self, json_file):
         pass
 
     def requests_data(self, links):
         pass
 
-    def save_to_file(self, file_name, content):
+    @staticmethod
+    def save_to_file(file_name, content):
         with open(file_name, 'w') as f:
             f.write(content)
 
@@ -17,5 +21,5 @@ class Task:
     def requests_all_data(self):
         pass
 
-    def clear():
+    def clear(self):
         pass

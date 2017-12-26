@@ -1,6 +1,5 @@
 import sqlite3
 
-
 HSGT_DB = '../../../data/hsgt.db'
 HSGT_COLUMNS = '''(date, s_code, s_name, close_price, up_percentage, share_hold_sum, share_rate, share_hold_price, share_hold_price_1, share_hold_price_5, share_hold_price_10)'''
 
@@ -26,12 +25,12 @@ class HSGTDB:
 
     def dispose(self):
         self.cursor.close()
-        self.conn.commit()
         self.conn.close()
 
     def insert_data(self, data):
         self.cursor.executemany(
             "insert into hsgt  values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", data)
+        self.conn.commit()
 
 
 if '__main__' == __name__:

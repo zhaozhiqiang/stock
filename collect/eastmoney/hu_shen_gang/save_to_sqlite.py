@@ -1,7 +1,6 @@
 import json
 import logging
 import os
-import sqlite3
 
 from tqdm import tqdm
 
@@ -19,7 +18,7 @@ class SaveToSqlite:
             with open(self.HSG_INFO, 'r') as f:
                 return json.load(f)
         else:
-            logging.error('Missed file: hsg.json')
+            logging.error('Missed file: ' + self.HSG_INFO)
 
     def get_original_str(self, file_name):
         if os.path.exists(self.HSG_INFO):
@@ -49,11 +48,11 @@ class SaveToSqlite:
         return item
 
     def str_to_list(self, string):
-        datas = json.loads(string)
-        iterms = []
-        for data in datas:
-            iterms.append(self.get_item(data))
-        return iterms
+        data = json.loads(string)
+        items = []
+        for datum in data:
+            items.append(self.get_item(datum))
+        return items
 
     def save_content_to_sqlite(self, content):
         hsgt_db = HSGTDB()
