@@ -51,4 +51,4 @@ class HSGT_Info:
 
         self._hsgt_info[self._hsgt][0][key] = value        
         with open(self.HSGT_JSON, 'w') as f:
-            json.dump(self._hsgt_info, f)
+            json.dump(self._hsgt_info, f, ensure_ascii=False, indent=4)

@@ -48,8 +48,8 @@ if '__main__' == __name__:
         hsgt_db.connect()
         date = hsgt_db.get_last_date()
         hgt_info = HSGT_Info('hgt')
-        sgt_info = HSGT_Info('sgt')
         hgt_info.update_hsgt_info('last_date', date)
+        sgt_info = HSGT_Info('sgt')
         sgt_info.update_hsgt_info('last_date', date)
     elif len(sys.argv) > 1 and 'sql' == sys.argv[1]:
         hgt = SaveToSqlite('hgt')
