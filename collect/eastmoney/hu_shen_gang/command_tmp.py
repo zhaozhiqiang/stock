@@ -9,6 +9,7 @@ from hsgt_info import HSGT_Info
 
 
 class Command:
+
     def __init__(self):
         self.load_hsgt()
 
