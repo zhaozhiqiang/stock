@@ -21,7 +21,7 @@ class SaveToSqlite:
     def save_file_to_sqlite(self, file_name):
         items = self.data_formatting.extract_items_in_file(file_name)
         print(items)
-        #self.save_data_to_sqlite(items)
+        self.save_data_to_sqlite(items)
 
     def save_all_files_to_sqlite(self):
         print(self.hsgt_info.name())

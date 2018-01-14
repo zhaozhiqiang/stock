@@ -8,6 +8,8 @@ from tqdm import tqdm
 from hsgt_info import HSGT_Info
 from task import Task
 
+TIMEOUT = 3
+RETRIES = 3
 
 class HuShenGangTong(Task):
     json_file = 'hsg.json'
@@ -33,12 +35,13 @@ class HuShenGangTong(Task):
     def get_file_path(self, index):
         return os.path.join(self.hsgt_info.folder(), self.generate_file_name(index))
 
-    def requests_data(self, index):
+    def requests_data(self, index, retries = RETRIES):
         try:
             page_link = self.hsgt_info.page_link(index)
-            content = requests.get(page_link).text
-        except requests.exceptions.Timeout as e:
-            logging.error(e.message)
+            content = requests.get(page_link, timeout = TIMEOUT).text
+        except:
+            if retries > 0:
+                return self.requests_data(index, retries - 1)
         self.save_to_file(
             self.get_file_path(index), content)
 
