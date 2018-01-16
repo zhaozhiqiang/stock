@@ -4,6 +4,7 @@
 .*_tong
 *.txt
 *.gitignore
+*.log
 data
 strategies
 __pycache__
