@@ -25,3 +25,4 @@ loggers:
 root:
   level: DEBUG
   handlers: [console, file]
+  propagate: no
