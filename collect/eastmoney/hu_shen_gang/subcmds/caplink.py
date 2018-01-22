@@ -27,10 +27,14 @@ class Caplink(CommandHSG):
         self.task = ''
 
     def get_hsg_link(self, pkt):
+
+        # the request url is in HTTP LAYER
         if 'HTTP' == pkt.highest_layer \
             and hasattr(pkt[LAYER_HTTP], 'request_full_uri') \
             and GET_KEY_WORK in pkt[LAYER_HTTP].request_full_uri:
-            logger.debug(pkt[LAYER_HTTP].request_full_uri)
+
+            # find the uri and then update link
+            logger.info(pkt[LAYER_HTTP].request_full_uri)
             self.update_link(pkt[LAYER_HTTP].request_full_uri)
 
     def update_link(self, link):
@@ -41,23 +45,23 @@ class Caplink(CommandHSG):
         self.task = hsgt
         pid = os.fork()
 
-        # start chromium
+        # start tshark
         if 0 == pid:
+            # sleep 5s to wait open web page
+            sleep(5)
+            self.cap_link()
+            os._exit(0)
+        # start chromium
+        else:
             if 'hgt' in hsgt:
-                print(0)
                 os.system('node ' + HGT_JS_PATH)
             else:
-                print(1)
                 os.system('node ' + SGT_JS_PATH)
-        # start tshark
-        else:
-            self.cap_link()
 
     def execute(self):
         self.run('hgt')
         sleep(10)
         self.run('sgt')
-        sleep(10)
 
     def cap_link(self):
         cap = pyshark.LiveCapture(interface = INTERFACE)

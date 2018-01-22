@@ -4,13 +4,13 @@
             "pages": "342",
             "name": "沪股通",
             "folder": "hu_gu_tong",
-            "last_date": "2018-01-12",
+            "last_date": "2018-01-20",
             "useless_length": 30,
-            "useful_begin": 28,
+            "useful_begin": 29,
             "useful_end": -1,
             "begin_length": "150",
-            "end_length": "105",
-            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=1&ps=50&js=var%20lPVTfrPl={pages:(tp),data:(x)}&filter=(MARKET=%27001%27)(HDDATE=^2018-01-15^)&rt=50537333"
+            "end_length": "139",
+            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=2&ps=50&js=var%20JdttbSgZ={pages:(tp),data:(x)}&filter=(MARKET=%27001%27)(HDDATE%3E=^2017-12-14^%20and%20HDDATE%3C=^2018-01-20^)&rt=50554543"
         }
     ],
     "sgt": [
@@ -18,13 +18,13 @@
             "pages": "444",
             "name": "深股通",
             "folder": "shen_gu_tong",
-            "last_date": "2018-01-12",
+            "last_date": "2018-01-20",
             "useless_length": 30,
-            "useful_begin": 28,
+            "useful_begin": 29,
             "useful_end": -1,
             "begin_length": "150",
-            "end_length": "105",
-            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=1&ps=50&js=var%20UbaXTznV={pages:(tp),data:(x)}&filter=(MARKET=%27003%27)(HDDATE=^2018-01-15^)&rt=50537289"
+            "end_length": "139",
+            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=2&ps=50&js=var%20wRZbQUxD={pages:(tp),data:(x)}&filter=(MARKET=%27003%27)(HDDATE%3E=^2017-12-14^%20and%20HDDATE%3C=^2018-01-20^)&rt=50554548"
         }
     ]
 }
