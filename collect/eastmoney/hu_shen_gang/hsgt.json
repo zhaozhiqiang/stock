@@ -4,13 +4,13 @@
             "pages": "342",
             "name": "沪股通",
             "folder": "hu_gu_tong",
-            "last_date": "2018-01-20",
+            "last_date": "2018-01-31",
             "useless_length": 30,
             "useful_begin": 29,
             "useful_end": -1,
             "begin_length": "150",
             "end_length": "139",
-            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=2&ps=50&js=var%20JdttbSgZ={pages:(tp),data:(x)}&filter=(MARKET=%27001%27)(HDDATE%3E=^2017-12-14^%20and%20HDDATE%3C=^2018-01-20^)&rt=50554543"
+            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=2&ps=50&js=var%20RwcVctHX={pages:(tp),data:(x)}&filter=(MARKET=%27001%27)(HDDATE%3E=^2017-12-27^%20and%20HDDATE%3C=^2018-01-31^)&rt=50583032"
         }
     ],
     "sgt": [
@@ -18,13 +18,13 @@
             "pages": "444",
             "name": "深股通",
             "folder": "shen_gu_tong",
-            "last_date": "2018-01-20",
+            "last_date": "2018-01-31",
             "useless_length": 30,
             "useful_begin": 29,
             "useful_end": -1,
             "begin_length": "150",
             "end_length": "139",
-            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=2&ps=50&js=var%20wRZbQUxD={pages:(tp),data:(x)}&filter=(MARKET=%27003%27)(HDDATE%3E=^2017-12-14^%20and%20HDDATE%3C=^2018-01-20^)&rt=50554548"
+            "link": "http://dcfm.eastmoney.com//em_mutisvcexpandinterface/api/js/get?type=HSGTHDSTA&token=70f12f2f4f091e459a279469fe49eca5&st=HDDATE,SHAREHOLDPRICE&sr=3&p=2&ps=50&js=var%20erFZjxta={pages:(tp),data:(x)}&filter=(MARKET=%27003%27)(HDDATE%3E=^2017-12-27^%20and%20HDDATE%3C=^2018-01-31^)&rt=50583043"
         }
     ]
 }

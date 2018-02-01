@@ -22,3 +22,7 @@ loggers:
     level: DEBUG
     handlers: [console]
     propagate: no
+  caplink:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
