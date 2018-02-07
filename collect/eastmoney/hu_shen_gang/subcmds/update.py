@@ -14,14 +14,14 @@ Delete cache data, download latest data and save them to sqlite'''
 
     def __init__(self):
         self.clear = Clear()
-        self.request = Request()
         self.cap_link = Caplink()
+        self.cap_link.execute()
+        self.request = Request()
         self.save = Save()
         self.update_json = UpdateDataInfo()
 
     def execute(self):
         self.clear.execute()
-        self.cap_link.execute()
         self.request.execute()
         self.save.execute()
         self.update_json.execute()
